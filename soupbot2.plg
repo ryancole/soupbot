@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: soupbot2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/SoupBot2.res" /d "_DEBUG" "C:\Documents and Settings\Ryan C\My Documents\things\SoupBot2\Soup Bot 2 (Win32)\SoupBot2.rc"" 
+Creating temporary file "C:\DOCUME~1\RYANC~1\LOCALS~1\Temp\RSP116.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib ws2_32.lib BNCSutil.lib version.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/soupbot2.pdb" /map:"Debug/soupbot2.map" /debug /machine:I386 /out:"Debug/soupbot2.exe" /pdbtype:sept 
+".\Debug\CRegister.obj"
+".\Debug\DynBuffer.obj"
+".\Debug\Encryption.obj"
+".\Debug\List.obj"
+".\Debug\Socket.obj"
+".\Debug\soupbot.obj"
+".\Debug\SoupBot2.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\RYANC~1\LOCALS~1\Temp\RSP116.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+soupbot2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

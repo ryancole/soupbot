@@ -1,0 +1,444 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDLG DIALOGEX 0, 0, 530, 311
+STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "SoupBot - by Warz - version 2"
+MENU IDR_MAINMENU
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "",IDC_BNCHAT,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,7,7,
+                    367,273
+    EDITTEXT        IDC_BNSEND,7,286,367,18,ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDC_CHANNAME,382,7,141,14,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "List1",IDC_CHANLIST,"SysListView32",LVS_SMALLICON | 
+                    LVS_SINGLESEL | WS_TABSTOP,382,23,141,281,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_CONFIGURE DIALOG DISCARDABLE  0, 0, 201, 229
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Character Setup"
+FONT 8, "Tahoma"
+BEGIN
+    GROUPBOX        "Current profile",IDC_STATIC,7,73,187,117
+    PUSHBUTTON      "Close",IDC_CONFIG_CLOSE,153,206,41,16
+    PUSHBUTTON      "Save and Close",IDC_CONFIG_SAVECLOSE,77,206,53,16
+    EDITTEXT        IDC_CONFIG_NAME,13,86,84,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONFIG_PASS,100,86,84,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONFIG_HOME,100,104,84,12,ES_AUTOHSCROLL
+    GROUPBOX        "Profile selection",IDC_STATIC,7,7,187,64
+    COMBOBOX        IDC_CONFIG_PROFILE_NAME,13,19,172,100,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New profile",IDC_CONFIG_NEWPROFILE,135,37,50,13
+    COMBOBOX        IDC_CONFIG_SERVER,100,152,84,100,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Save profile",IDC_CONFIG_SAVEPROFILE,81,37,50,13
+    PUSHBUTTON      "Delete profile",IDC_CONFIG_DELETEPROFILE,28,53,50,13
+    PUSHBUTTON      "Rename profile",IDC_CONFIG_RENAMEPROFILE,136,53,50,13
+    PUSHBUTTON      "Undo changes",IDC_CONFIG_UNDOCHANGES,81,53,50,13
+    COMBOBOX        IDC_CONFIG_GAME,13,152,84,100,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CONFIG_CDKEY,13,120,84,60,CBS_DROPDOWNLIST | 
+                    CBS_UPPERCASE | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Spawn",IDC_CONFIG_SPAWN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,101,121,84,10
+    COMBOBOX        IDC_CONFIG_EXPCDKEY,13,136,84,60,CBS_DROPDOWNLIST | 
+                    CBS_UPPERCASE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_CONFIG_EMAIL,13,173,170,12,ES_AUTOHSCROLL
+END
+
+IDD_CREATE_PROFILE DIALOG DISCARDABLE  0, 0, 159, 63
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Create new/rename existing profile"
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_PROFILE_NAME,7,7,145,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_PROFILE_EDIT_NAME,7,23,145,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Cancel",IDC_PROFILE_CANCEL,101,41,51,15
+    DEFPUSHBUTTON   "Set name",IDC_PROFILE_SETNAME,47,41,51,15
+END
+
+IDD_CDKEYS DIALOG DISCARDABLE  0, 0, 199, 111
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "CD Key setup"
+FONT 8, "Tahoma"
+BEGIN
+    PUSHBUTTON      "Close",IDC_CDKEYS_CLOSE,145,86,47,16
+    PUSHBUTTON      "Add CD Key",IDC_CDKEYS_ADD,7,86,47,16
+    COMBOBOX        IDC_CDKEYS_CDKEY,7,7,100,60,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_DISABLENOSCROLL | CBS_UPPERCASE | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Key group",IDC_STATIC,112,7,80,75,WS_GROUP
+    CONTROL         "SC/BW",IDC_CDKEYS_SC,"Button",BS_AUTORADIOBUTTON,117,17,
+                    64,10
+    CONTROL         "Warcraft II",IDC_CDKEYS_W2,"Button",BS_AUTORADIOBUTTON,
+                    117,27,64,11
+    CONTROL         "Diablo II",IDC_CDKEYS_D2,"Button",BS_AUTORADIOBUTTON,
+                    117,37,64,12
+    PUSHBUTTON      "Delete CD Key",IDC_CDKEYS_DELETE,68,86,53,16
+    CONTROL         "Diablo II: LoD",IDC_CDKEYS_LOD,"Button",
+                    BS_AUTORADIOBUTTON,117,47,64,12
+    CONTROL         "Warcraft III",IDC_CDKEYS_WAR3,"Button",
+                    BS_AUTORADIOBUTTON,117,57,58,11
+    CONTROL         "Warcraft III: TFT",IDC_CDKEYS_TFT,"Button",
+                    BS_AUTORADIOBUTTON,117,67,75,12
+END
+
+IDD_FILE_PATHS DIALOG DISCARDABLE  0, 0, 172, 90
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "File path setup"
+FONT 8, "Tahoma"
+BEGIN
+    COMBOBOX        IDC_PATHS_GAME,7,7,157,60,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Close",IDC_PATHS_CLOSE,117,68,47,15
+    EDITTEXT        IDC_PATHS_EXE,7,23,93,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PATHS_DLL,7,37,93,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PATHS_SNP,7,51,93,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Save paths",IDC_PATHS_SAVE,64,68,47,15
+    PUSHBUTTON      "Browse",IDC_PATHS_BROWSE_EXE,107,23,57,12
+    PUSHBUTTON      "Browse",IDC_PATHS_BROWSE_DLL,107,37,57,12
+    PUSHBUTTON      "Browse",IDC_PATHS_BROWSE_SNP,107,51,57,12
+END
+
+IDD_MISC DIALOG DISCARDABLE  0, 0, 216, 169
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Miscellaneous"
+FONT 8, "Tahoma"
+BEGIN
+    GROUPBOX        "Idle options",IDC_STATIC,7,7,202,76
+    CONTROL         "Use idle",IDC_MISC_USEIDLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,18,44,11
+    EDITTEXT        IDC_MISC_IDLETIME,73,17,39,12,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           "Idle delay in seconds",IDC_STATIC,122,17,66,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_MISC_IDLEMSG,14,33,99,12,ES_AUTOHSCROLL
+    CONTROL         "Idle from Quotes.txt",IDC_MISC_IDLEQUOTES,"Button",
+                    BS_AUTORADIOBUTTON,121,32,81,13
+    CONTROL         "Idle specific message",IDC_MISC_IDLESPEC,"Button",
+                    BS_AUTORADIOBUTTON,122,48,82,12
+    PUSHBUTTON      "Set idle options",IDC_MISC_SETIDLE,16,54,74,14
+    PUSHBUTTON      "Close",IDC_MISC_CLOSE,144,144,65,18
+    GROUPBOX        "Startup message",IDC_STATIC,7,86,202,45
+    EDITTEXT        IDC_MISC_STARTUPMSG,13,114,108,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set startup message",IDC_MISC_SETSTART,127,111,71,16
+    CONTROL         "Use startup message",IDC_MISC_USESTARTMSG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,98,108,12
+END
+
+IDD_PROFILE DIALOG DISCARDABLE  0, 0, 199, 214
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "profile"
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_PROFILE_NAME,7,19,67,20,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_PROFILE_SEX,80,19,52,21,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,140,19,52,21,ES_AUTOHSCROLL
+    LTEXT           "Name",IDC_STATIC,7,7,53,10
+    LTEXT           "Sex",IDC_STATIC,80,7,52,9
+    LTEXT           "Age",IDC_STATIC,141,7,51,10
+    EDITTEXT        IDC_PROFILE_LOCATION,7,60,185,20,ES_AUTOHSCROLL
+    LTEXT           "Location",IDC_STATIC,7,48,86,11
+    EDITTEXT        IDC_PROFILE_DESCRIPTION,7,104,185,84,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL
+    LTEXT           "Description",IDC_STATIC,7,91,93,11
+    PUSHBUTTON      "OK",IDC_PROFILE_OK,82,193,52,13
+    DEFPUSHBUTTON   "Cancel",IDC_PROFILE_CANCEL,140,193,52,13
+END
+
+IDD_CREATE_ACCT DIALOG DISCARDABLE  0, 0, 240, 109
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Account Does Not Exist"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "The account you have specified does not exist. What would you like to do?",
+                    IDC_CREATE_ACCT_NOTE,7,7,226,19
+    LTEXT           "If you would like to create this account you must confirm your password.",
+                    IDC_STATIC,7,27,226,18
+    LTEXT           "Confirm password:",IDC_STATIC,7,54,39,19
+    EDITTEXT        IDC_CREATE_ACCT_PASSWORD,49,53,184,20,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Create Account",IDC_CREATE_ACCT_CREATE,171,85,62,17
+    PUSHBUTTON      "Cancel",IDC_CREATE_ACCT_CANCEL,109,85,59,17
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 523
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 304
+    END
+
+    IDD_CONFIGURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 222
+    END
+
+    IDD_CREATE_PROFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 152
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_CDKEYS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_FILE_PATHS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_MISC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_PROFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+    END
+
+    IDD_CREATE_ACCT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Connection"
+    BEGIN
+        MENUITEM "Connect",                     ID_CONNECTION_CONNECT
+        MENUITEM "Disconnect",                  ID_CONNECTION_DISCONNECT
+    END
+    POPUP "Configuration"
+    BEGIN
+        POPUP "Font setup"
+        BEGIN
+            MENUITEM "Channel name",                ID_CONFIGURATION_FONTSETUP_CHANNELNAME
+
+            MENUITEM "Channel text",                ID_CONFIGURATION_FONTSETUP_CHANTEXT
+
+            MENUITEM "Channel list",                ID_CONFIGURATION_FONTSETUP_CHANNELLIST
+
+            MENUITEM "Your text",                   ID_CONFIGURATION_FONTSETUP_YOURTEXT
+
+        END
+        MENUITEM "Character setup",             ID_CONFIGURATION_CHARACTERSETUP
+
+        MENUITEM "File paths",                  ID_CONFIGURATION_FILEPATHS
+        MENUITEM "CD keys",                     ID_CONFIGURATION_CDKEYS
+        MENUITEM "Miscellaneous",               ID_CONFIGURATION_MISCELLANEOUS
+
+    END
+END
+
+IDR_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Copy",                        ID_POPUP_COPY
+        MENUITEM "Send quote",                  ID_POPUP_SENDQUOTE
+        MENUITEM "Add to Quotes.txt",           ID_POPUP_QUOTES
+        MENUITEM SEPARATOR
+        MENUITEM "Rejoin",                      ID_POPUP_REJOIN
+        MENUITEM SEPARATOR
+        MENUITEM "Clear",                       ID_POPUP_CLEAR
+    END
+END
+
+IDR_POPUP2 MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Squelch",                     ID_POPUP2_SQUELCH
+        MENUITEM "Unsquelch",                   ID_POPUP2_UNSQUELCH
+        MENUITEM "Whois",                       ID_POPUP2_WHOIS
+        MENUITEM SEPARATOR
+        MENUITEM "Profile",                     ID_POPUP2_PROFILE
+        MENUITEM "Record Data",                 ID_POPUP2_RECORDDATA
+        MENUITEM SEPARATOR
+        MENUITEM "Kick",                        ID_POPUP2_KICK
+        MENUITEM "Ban",                         ID_POPUP2_BAN
+        MENUITEM "Designate",                   ID_POPUP2_DES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ICONS               BITMAP  DISCARDABLE     "group.bmp"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,1
+ PRODUCTVERSION 2,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Beta Productions\0"
+            VALUE "FileDescription", "SoupBot - another bot by warz\0"
+            VALUE "FileVersion", "2, 0, 0, 1\0"
+            VALUE "InternalName", "soupbot2\0"
+            VALUE "LegalCopyright", "Copyright © 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "soupbot2.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "SoupBot 2 - by Warz\0"
+            VALUE "ProductVersion", "2, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_BIG                 ICON    DISCARDABLE     "32-icon.ico"
+IDI_SMALL               ICON    DISCARDABLE     "16-icon.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
